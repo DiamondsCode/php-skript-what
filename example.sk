@@ -1,0 +1,5 @@
+on join:
+  set {_joins} to text from "https://domain.com/data-system/get.php?uuid=%player's uuid%&variable=joins"
+  set {_joins2} to {_joins}+1
+  set {_joins3} to text from "https://domain.com/data-system/set.php?uuid=%player's uuid%&variable=joins&value=%{_joins2}%"
+  broadcast "%player% has joined %{_joins2}% times."
